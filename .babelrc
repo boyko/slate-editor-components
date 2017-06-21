@@ -5,15 +5,19 @@
     "transform-decorators-legacy"
   ],
   "presets": [
-    ["es2015", { "modules": false }],
+    [
+      "env",
+      {
+        "targets": {
+          "node": true,
+          "browsers": [
+            "last 2 versions",
+            "safari >= 6"
+          ]
+        }
+      }
+    ],
     "react",
     "stage-3"
-  ],
-  "env": {
-    "development": {
-      "presets": [
-        "react-hmre"
-      ]
-    }
-  }
+  ]
 }
