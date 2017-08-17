@@ -1,7 +1,5 @@
 const webpack = require('webpack');
 const path = require('path');
-
-const DashboardPlugin = require('webpack-dashboard/plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
@@ -50,6 +48,23 @@ const rules = [
       'babel-loader',
     ],
   },
+  {
+    test: /\.svg$/,
+    use: [
+      {
+        loader: 'babel-loader'
+      },
+      {
+        loader: 'react-svg-loader',
+        options: {
+          svgo: {
+            plugins: [{removeTitle: false}],
+            floatPrecision: 2
+          }
+        }
+      }
+    ]
+  }
 ];
 
 if (isProduction) {
@@ -88,8 +103,7 @@ if (isProduction) {
 } else {
   // Development plugins
   plugins.push(
-    new webpack.HotModuleReplacementPlugin(),
-    new DashboardPlugin()
+    new webpack.HotModuleReplacementPlugin()
   );
 
   // Development rules

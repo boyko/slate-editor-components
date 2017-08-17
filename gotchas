@@ -1,0 +1,3 @@
+// e.g. icon as function argument: Instead of evaluating the argument
+// JSX uses the generic component: i.e. render <icon/> instead of
+// evaluating the function passed.
