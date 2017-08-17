@@ -4819,9 +4819,9 @@ react-element-to-jsx-string@^5.0.0:
     stringify-object "2.4.0"
     traverse "^0.6.6"
 
-"react-material-icons@file:/home/amarov/proj/react-material-icons/react-material-icons-v0.0.1.tgz":
+"react-material-icons@https://github.com/boyko/react-material-icons":
   version "0.0.1"
-  resolved "/home/amarov/proj/react-material-icons/react-material-icons-v0.0.1.tgz#014279ce2092182972d857340f26b8bdd1165950"
+  resolved "https://github.com/boyko/react-material-icons#1067c1d9e0b4511adcbc303d0d1d670f81eb9487"
 
 react-portal@^3.1.0:
   version "3.1.0"
