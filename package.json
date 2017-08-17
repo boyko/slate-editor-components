@@ -1,6 +1,6 @@
 {
-  "name": "uroute",
-  "version": "0.1.7",
+  "name": "slate-editor-components",
+  "version": "0.1.8",
   "private": false,
   "license": "MIT",
   "main": "index.js",
