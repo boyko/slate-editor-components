@@ -5364,9 +5364,9 @@ slash@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
 
-slate@^0.21.0:
-  version "0.21.0"
-  resolved "https://registry.yarnpkg.com/slate/-/slate-0.21.0.tgz#52c3b5e2d83d5a8412e55409863b94ca5b61e5a0"
+slate@^0.21.2:
+  version "0.21.2"
+  resolved "https://registry.yarnpkg.com/slate/-/slate-0.21.2.tgz#847a789753193b48ce810f1d4db5216ecc412a4a"
   dependencies:
     debug "^2.3.2"
     direction "^0.1.5"

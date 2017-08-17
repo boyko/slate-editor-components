@@ -4,7 +4,7 @@ const schema = {
   nodes: {
     'bulleted-list': props => <ul {...props.attributes}>{props.children}</ul>,
     'numbered-list': props => <ol {...props.attributes}>{props.children}</ol>,
-    'code': props => <pre><code {...props.attributes}>{props.children}</code></pre>,
+    code: props => <pre><code {...props.attributes}>{props.children}</code></pre>,
     'heading-one': props => <h1 {...props.attributes}>{props.children}</h1>,
     'heading-two': props => <h2 {...props.attributes}>{props.children}</h2>,
     'heading-three': props => <h3 {...props.attributes}>{props.children}</h3>,
@@ -12,7 +12,7 @@ const schema = {
     'heading-five': props => <h5 {...props.attributes}>{props.children}</h5>,
     'heading-six': props => <h6 {...props.attributes}>{props.children}</h6>,
     'list-item': props => <li {...props.attributes}>{props.children}</li>,
-    'quote': props => <blockquote {...props.attributes}>{props.children}</blockquote>,
+    quote: props => <blockquote {...props.attributes}>{props.children}</blockquote>,
   },
   marks: {
     bold: props => <strong>{props.children}</strong>,

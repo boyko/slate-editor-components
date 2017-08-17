@@ -5,7 +5,7 @@ import { Editor, Html, Raw } from 'slate';
 import React from 'react';
 import initialState from './state.json';
 import schema from '../src/schema';
-import Toolbar from './Toolbar';
+import Toolbar from '../src/Toolbar';
 import configureLinkPlugin from '../src/plugins/Link';
 import RULES from '../src/html';
 
@@ -44,13 +44,6 @@ class PasteHtml extends React.Component {
       state: Raw.deserialize(initialState, { terse: true }),
     };
   }
-
-  /**
-   * Deserialize the raw initial state.
-   *
-   * @type {Object}
-   */
-
 
   /**
    * On change, save the new state.

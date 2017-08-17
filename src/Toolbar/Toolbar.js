@@ -9,7 +9,7 @@ import LinkIcon from 'react-material-icons/lib/link.svg.react';
 import HeadingOneIcon from 'react-material-icons/lib/filter_1.svg.react';
 import HeadingTwoIcon from 'react-material-icons/lib/filter_2.svg.react';
 
-import { hasMark, hasBlock, hasInline } from '../src/utils';
+import { hasMark, hasBlock, hasInline } from '../utils';
 
 // defined  in index.js, not DRY
 const DEFAULT_NODE = 'paragrpah';
@@ -42,7 +42,7 @@ class Toolbar extends React.Component {
     const nextState = this.props.state
       .transform()
       .undo()
-      .apply();
+      .apply({ save: false });
 
     this.onChange(nextState);
   };
@@ -51,7 +51,7 @@ class Toolbar extends React.Component {
     const nextState = this.props.state
       .transform()
       .redo()
-      .apply();
+      .apply({ save: false });
 
     this.onChange(nextState);
   };
@@ -215,8 +215,8 @@ class Toolbar extends React.Component {
     return (
       <div className="toolbar">
         {this.props.onSave && this.renderGenericButton(this.onSave, SaveIcon)}
-        {this.renderGenericButton(this.onUndo, UndoIcon)}
-        {this.renderGenericButton(this.onRedo, RedoIcon)}
+        {this.renderGenericButton(this.onUndo, UndoIcon, this.canUndo())}
+        {this.renderGenericButton(this.onRedo, RedoIcon, this.canRedo())}
         {this.renderMarkButton('bold', BoldIcon)}
         {this.renderMarkButton('italic', ItalicIcon)}
         {this.renderGenericButton(this.onClickLink, LinkIcon)}
