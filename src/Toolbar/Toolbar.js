@@ -214,7 +214,7 @@ class Toolbar extends React.Component {
   render() {
     return (
       <div className="toolbar">
-        {this.props.onSave && this.renderGenericButton(this.onSave, SaveIcon)}
+        {this.props.onSave && this.renderGenericButton(this.onSave, SaveIcon, this.canUndo())}
         {this.renderGenericButton(this.onUndo, UndoIcon, this.canUndo())}
         {this.renderGenericButton(this.onRedo, RedoIcon, this.canRedo())}
         {this.renderMarkButton('bold', BoldIcon)}
