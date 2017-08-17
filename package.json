@@ -9,7 +9,6 @@
     "start": "webpack-dev-server",
     "dev": "webpack-dev-server",
     "build": "rimraf lib && babel src -d lib",
-    "install": "npm run build",
     "lint-break-on-errors": "eslint ./source/js ./webpack.config.js -f table --ext .js --ext .jsx",
     "lint": "eslint ./source/js ./webpack.config.js -f table --ext .js --ext .jsx || true",
     "preview": "rm -rf ./build && NODE_ENV=\"production\" webpack-dashboard -t 'Preview Mode - Marvin' -- webpack-dev-server",
